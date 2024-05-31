@@ -1,4 +1,4 @@
-// // twoSum
+// twoSum
 // let nums=[1,2,3,4,5,6];
 // let target = 3;
 // function twoSum (nums,target){
@@ -61,7 +61,7 @@
 // console.log(linearSearch(arr,target))
 
 
-// bubble sort
+// // bubble sort
 
 // let arr  = [21993,123,123,4,4,43543,534,2,344,425,25,535,-2];
 
@@ -82,9 +82,7 @@
 
 // console.log(bubbleSort(arr))
 
-// worst and average case O(n^2)
-
-// // selection sort    
+// // selection sort
 
 
 // let arr =  [8,56,352,678786,86,6465,424,455,656,57,86,8];
@@ -111,69 +109,6 @@
 
 // console.log(selectionSort(arr,n))
 
-// worst and average case O(n^2)
-
-
-// Merge sort
-// let arr = [9128331,33,24245,6,67,86,869,4533,123,4,556457456,3542,42,425,3646];
-// function mergeSort (arr){
-//     if(arr.length<2){
-//         return arr;
-//     }
-
-//     const mid = Math.floor(arr.length/2);
-
-//     const leftarr = arr.slice(0,mid);
-//     const rightarr = arr.slice(mid);
-
-//    return merge(mergeSort(leftarr),mergeSort(rightarr));
-// }
-
-// function merge(leftarr,rightarr){
-//     const sortedarr = [];
-//     while(leftarr.length && rightarr.length){
-
-//         if (leftarr[0]<=rightarr[0]){
-//             sortedarr.push(leftarr.shift())
-//         }
-//         else{
-//             sortedarr.push(rightarr.shift());
-//         }
-//     }
-//     return [...sortedarr,...leftarr,...rightarr]
-// }
-// console.log(mergeSort(arr));
-
-// this is the best case of sorting element O(nlogn)
-
-// Quick sort
-
-// let arr = [32,123,45,34546,657,-1,7,68,4234,5345,645,64452,432,34,5435];
-
-// function quickSort (arr){
-//     if (arr.length<2){
-//         return arr
-//     }
-
-//     let pivot = arr[arr.length-1];
-//     let leftarr = [];
-//     let rightarr = [];
-    
-//     for (let i=0;i<arr.length-1;i++){
-//         if(arr[i]<pivot){
-//             leftarr.push(arr[i]);
-//         }
-//         else{
-//             rightarr.push(arr[i]);
-//         }
-//     }
-//     return [...quickSort(leftarr), pivot,...quickSort(rightarr)]
-
-// }
-
-// console.log(quickSort(arr));
-
-// the best case complexity O(n log n)
 
 // // duplicate number delete
 
@@ -190,7 +125,7 @@
 // // find element and insertion
 
 // let arr = [1,2,33,422,565];
-// let target =33;
+// let target =333;
 
 // function binarySearch (arr,target){
 
@@ -294,6 +229,77 @@
 //     console.log(val.toUpperCase());
 // }
 
+// /* javascript program to implement basic stack
+// operations 
+// */
+
+// // var t = -1;
+// // 	var MAX = 5;
+// // 	var a = Array(MAX).fill(0); // Maximum size of Stack
+
+// // 	function isEmpty() {
+// // 		return (t < 0);
+		
+// // 	}
+
+// // 	function push(x) {
+// // 		if (t >= (MAX - 1)) {
+// // 			document.write("Stack Overflow");
+// // 			return false;
+// // 		} else {
+// // 		t+=1;
+// // 			a[t] = x;
+			
+// // 			document.write(x + " pushed into stack<br/>");
+// // 			return true;
+// // 		}
+// // 	}
+
+// // 	function pop() {
+// // 		if (t < 0) {
+// // 			document.write("Stack Underflow");
+// // 			return 0;
+// // 		} else {
+// // 			var x = a[t];
+// // 			t-=1;
+// // 			return x;
+// // 		}
+// // 	}
+
+// // 	function peek() {
+// // 		if (t < 0) {
+// // 			document.write("Stack Underflow");
+// // 			return 0;
+// // 		} else {
+// // 			var x = a[t];
+// // 			return x;
+// // 		}
+// // 	}
+
+// // 	function print() {
+// // 		for (i = t; i > -1; i--) {
+// // 			document.write(" " + a[i]);
+// // 		}
+// // 	}
+
+// // 		push(10);
+// // 		push(20);
+// // 		push(30);
+// //         push(10);
+// // 		push(20);
+// // 		push(30);
+// //         push(10);
+// // 		push(20);
+// // 		push(30);
+// //         push(100);
+// // 		isEmpty()
+// // 		document.write(pop() + " Popped from stack");
+// // 		document.write("<br/>Top element is :" + peek());
+// // 		document.write("<br/>Elements present in stack : ");
+// // 		print();
+
+// // This code is contributed by Rajput-Ji 
+
 // // stack operation
 // let t =-1 ;
 // let MAX = 10;
@@ -363,8 +369,76 @@
 
 
 
+// // Queue class
+// // class Queue
+// // {
+// // 	// Array is used to implement a Queue
+// // 	constructor()
+// // 	{
+// // 		this.items = [];
+// // 	}
+// // 	isEmpty()
+// // 	{
+// // 		// return true if the queue is empty.
+// // 		return this.items.length == 0;
+// // 	}
+// // 	enqueue(element)
+// // 	{ 
+// // 		// adding element to the queue
+// // 		this.items.push(element);
+// // 		document.write(element + " enqueued to queue<br>");
+// // 	}
+// // 	dequeue()
+// // 	{
+// // 		// removing element from the queue
+// // 		// returns underflow when called 
+// // 		// on empty queue
+// // 		if(this.isEmpty())
+// // 			return "Underflow<br>";
+// // 		return this.items.shift();
+// // 	}
+// // 	front()
+// // 	{
+// // 		// returns the Front element of 
+// // 		// the queue without removing it.
+// // 		if(this.isEmpty())
+// // 			return "No elements in Queue<br>";
+// // 		return this.items[0];
+// // 	}
+// // 	rear()
+// // 	{
+// // 		// returns the Rear element of 
+// // 		// the queue without removing it.
+// // 		if(this.isEmpty())
+// // 			return "No elements in Queue<br>";
+// // 		return this.items[this.items.length-1];
+// // 	}
+// // }
 
-// Queue
+// // // creating object for queue class
+// // var queue = new Queue();
+
+// // // Adding elements to the queue
+// // queue.enqueue(10);
+// // queue.enqueue(20);
+// // queue.enqueue(30);
+// // queue.enqueue(40);
+
+// // // queue contains [10, 20, 30, 40]
+// // // removes 10
+// // document.write(queue.dequeue() + " dequeued from queue<br>");
+
+// // // queue contains [20, 30, 40]
+// // // Front is now 20
+// // document.write("Front item is " + queue.front() + "<br>");
+
+// // // printing the rear element
+// // // Rear is 40
+// // document.write("Rear item is " + queue.rear() + "<br>");
+
+// // // This code is contributed by Susobhan Akhuli
+
+// // Queue
 
 
 // class queue {
@@ -444,7 +518,6 @@
 // }
 
 // // Create/Get/Remove Nodes From Linked List
-
 // class LinkedList {
 //   constructor() {
 //     this.head = null;
@@ -509,108 +582,116 @@
 
 // ll.printListData();
 
-
-// class Node {
-//     constructor(data,next=null){
-//         this.data=data;
-//         this.next=next;
+// function maxChocolates(money) {
+//     let chocolates = money; // Number of chocolates you can buy initially with the money
+//     let wrappers = chocolates; // Number of wrappers initially equals the number of chocolates bought
+//     while (wrappers >= 3) { // Keep exchanging wrappers for chocolates until you don't have enough wrappers
+//         let exchangedChocolates = Math.floor(wrappers / 3); // Number of chocolates you can get by exchanging wrappers
+//         chocolates += exchangedChocolates; // Add exchanged chocolates to the total count
+//         wrappers = exchangedChocolates + (wrappers % 3); // Remaining wrappers after exchange
 //     }
+//     return chocolates;
 // }
 
-// class LinkedList {
-//     constructor (){
-//         this.head=null;
-//         this.size=0;
+// // Example usage:
+// const money = 15; // Amount of money you have
+// const maxChocs = maxChocolates(money);
+// console.log("Maximum chocolates you can eat:", maxChocs);
+    
+// function totalChoclate(money){
+//     let chocolates=money;
+//     let wrappers=money;
+//     while(wrappers>=3){
+//         let extraChoclate = Math.floor(wrappers/3);
+//         chocolates+=extraChoclate;
+//         wrappers=extraChoclate+(wrappers%3);
 //     }
-
-//     // InsertFirst Node
-
-//     insertFirst(data){
-//        this.head=new Node(data,this.head);
-//        this.size++;
-//     }
-
-//     insertLast(data){
-//         let node = new Node(data);
-//         let current;
-//         if(!this.head){
-//             this.head=node;
-//         }
-//         else{
-//             current=this.head;
-
-//             while(current.next){
-//                 current=current.next;
-
-//             }
-
-//             current.next=node;
-
-//         }
-//         this.size++;
-//     }
-
-//     print(){
-//         let current=this.head;
-
-//         while(current){
-//             console.log(current.data);
-//             current=current.next;
-//         }
-//     }
-
+//     return chocolates
 // }
 
-// let LL = new LinkedList();
-// LL.insertFirst(100);
-// LL.insertFirst(200);
-// LL.insertFirst(300);
-// LL.insertLast(500)
-// LL.print()
+// let maxChocs = totalChoclate(15);
+// console.log(maxChocs);
 
+// function maxSubarray (nums){
 
+//   if (nums.length===0) return 0 ;
 
-// function mergeSort (arr) {
-//     if (arr.length<2){
-//         return arr;
-//     }
-// let mid = Math.floor(arr.length/2);
-// let leftarr = arr.slice(0,mid);
-// let rightarr = arr.slice(mid);
+//   let max = nums[0];
+//   let min = nums[0];
+//   let result = nums[0];
 
-// return merge (mergeSort(leftarr),mergeSort(rightarr))
+//   for (let i=1;i<nums.length;i++){
 
-// }
+//     let tempmax = Math.max(nums[i],max*nums[i]);
+//     let tempmin =Math.min(nums[i],min*nums[i]);
 
-// function merge (leftarr,rightarr){
-//     let sortedarr = [];
+//     max=tempmax;
+//     min=tempmin;
 
-//     while(leftarr.length && rightarr.length){
-//         if(leftarr[0]<=rightarr[0]){
-//             sortedarr.push(leftarr.shift());
-//         }
-//         else{
-//             sortedarr.push(rightarr.shift())
-//         }
-//     }
-//     return [...sortedarr,...leftarr,...rightarr]
+//     result=Math.max(result,max)
+
+//   }
+
+//    return result
 // }
 
 
-// console.log(mergeSort(arr));
+// console.log(maxSubarray ([-2,0,-1]))
+// let str = 'hello world';
+// function reverseStr (str){
+//     return str.split('').reverse().join('')
+// }
+// console.log(reverseStr(str));
+
+// function reveseLoop(str) {
+    
+//     let reverse="";
+
+//     for (let c of str){
+//         reverse=c+reverse;
+//     }
 
 
+//     return reverse;
+// }
+// console.log(reveseLoop(str));;
 
- 
+// function reverseWords(str) {
+//     // Split the string into an array of words
+//         let wordsArray = str.split(" ");
+        
+//         // Reverse the array
+//         wordsArray = wordsArray.reverse();
+        
+//         // Join the words back into a string
+//         let reversedString = wordsArray.join(" ");
+        
+//         return reversedString;
+// }
+// console.log(reverseWords(str));
 
+// function reverseWord(str2){
 
+//     let reversed = str2.split('.');
+//     reversed=reversed.reverse();
+//     let change = reversed.join('.');
+    
+    
+//  return change;
 
+// }
+// let str2  = "Nithish.kumar.very.inteligent"
+// // console.log(reverseWord(str2));
 
+// let s = " the sky is blue ";
 
-
-
-
-
-
-
-
+// var reverseWords = function(s) {
+//     let str = s.split(" ");
+//      let output = "";
+//      for (let i = str.length - 1; i >= 0; i--)
+//          if (str[i]) output += (output ? " " : "") + str[i];
+//      return output;
+     
+     
+//  };
+//  console.log(reverseWords(s));  
